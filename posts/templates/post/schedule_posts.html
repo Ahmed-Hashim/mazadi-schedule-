@@ -35,8 +35,8 @@
                                    
 									<td style="font-size: 11px;" >
 										{% if post.schedule %}
-										Scheduled at :
-										<br/>{{post.date_to_publish}}
+										Publish in :
+										<br/>{{ post.date_to_publish | timeuntil }}
 										{% endif %}
 										</td>
 									<td>
