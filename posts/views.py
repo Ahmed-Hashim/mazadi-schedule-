@@ -180,8 +180,8 @@ def publish_now(request,id):
    postupdate=Post.objects.filter(pk=int(id))
    post=Post.objects.get(pk=int(id))
    
-   link=post.design_link 
-   if link:       
+   link=post.design_link
+   if post.design_link:       
       link=uploadimg(link)[0]
       print(link)
    else:
