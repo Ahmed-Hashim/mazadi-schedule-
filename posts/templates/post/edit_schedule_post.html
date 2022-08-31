@@ -30,7 +30,9 @@
                     <div class="container">
                  {%if post.imagelink %}
                 <img name="{{post.imagelink}}" src="{{post_details.design_link.url}}" alt=""></div>
-               {%endif%}
+               {%else%}
+  <img  src="{{post_details.link}}" alt=""></div>
+{%endif%}
  {% csrf_token %}    
                 {{ form.as_p }}
                 <input type="submit" value="Update" class="btn btn-secondary">
